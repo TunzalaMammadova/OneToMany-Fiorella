@@ -26,7 +26,7 @@ namespace OneToMany_task.Controllers
             HomeVM model = new()
             {
                 Sliders = sliders,
-                
+                SliderInfo=sliderInfo
             };
 
             return View(model);
