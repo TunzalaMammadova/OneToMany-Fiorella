@@ -11,6 +11,7 @@
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="~/owlcarousel/owl.carousel.min.css">
     <link rel="stylesheet" href="~/owlcarousel/owl.theme.default.min.css">
+    @RenderSection("css",false)
     <link rel="stylesheet" href="~/css/style.css">
     <title>Fiorello &#8211; A Flower Shop and Florist WooCommerce Theme</title>
 </head>
@@ -36,7 +37,7 @@
                         <div class="collapse navbar-collapse d-none d-lg-block" id="navbarSupportedContent">
                             <ul class="navbar-nav ml-auto">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Home</a>
+                                    <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
                                     <ul class="list-unstyled py-3">
                                         <li class=""><a class="px-1" href="">Home 1</a></li>
                                         <li class=""><a class="px-1" href="">Home 2</a></li>
@@ -115,7 +116,7 @@
                                     </ul>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">Blog</a>
+                                    <a class="nav-link" asp-controller="Blog" asp-action ="Index">Blog</a>
                                     <ul class="list-unstyled py-3">
                                         <li class=""><a class="px-1" href="">Blog 1</a></li>
                                         <li class=""><a class="px-1" href="">Blog 2</a></li>

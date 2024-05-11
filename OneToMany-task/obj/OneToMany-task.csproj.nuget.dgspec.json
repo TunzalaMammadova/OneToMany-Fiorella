@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/tunzale/Projects/OneToMany-task/OneToMany-task/OneToMany-task.csproj": {}
+    "/Users/tunzale/Desktop/OneToMany-task/OneToMany-task/OneToMany-task.csproj": {}
   },
   "projects": {
-    "/Users/tunzale/Projects/OneToMany-task/OneToMany-task/OneToMany-task.csproj": {
+    "/Users/tunzale/Desktop/OneToMany-task/OneToMany-task/OneToMany-task.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/tunzale/Projects/OneToMany-task/OneToMany-task/OneToMany-task.csproj",
+        "projectUniqueName": "/Users/tunzale/Desktop/OneToMany-task/OneToMany-task/OneToMany-task.csproj",
         "projectName": "OneToMany-task",
-        "projectPath": "/Users/tunzale/Projects/OneToMany-task/OneToMany-task/OneToMany-task.csproj",
+        "projectPath": "/Users/tunzale/Desktop/OneToMany-task/OneToMany-task/OneToMany-task.csproj",
         "packagesPath": "/Users/tunzale/.nuget/packages/",
-        "outputPath": "/Users/tunzale/Projects/OneToMany-task/OneToMany-task/obj/",
+        "outputPath": "/Users/tunzale/Desktop/OneToMany-task/OneToMany-task/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/tunzale/.nuget/NuGet/NuGet.Config"

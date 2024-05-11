@@ -17,6 +17,10 @@
     <Folder Include="Controllers\" />
     <Folder Include="Data\" />
     <Folder Include="ViewModels\" />
+    <Folder Include="Views\Blog\" />
+    <Folder Include="Views\Product\" />
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Home\" />
@@ -24,6 +28,10 @@
     <None Remove="Controllers\" />
     <None Remove="Data\" />
     <None Remove="ViewModels\" />
+    <None Remove="Views\Blog\" />
+    <None Remove="Views\Product\" />
+    <None Remove="Services\" />
+    <None Remove="Services\Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.29" />

@@ -1,6 +1,7 @@
-﻿@using OneToMany_task.ViewModels;
+﻿@namespace OneToMany_task.Models
 
 @model HomeVM
+
 <!-- MAIN START -->
 
 <main>
@@ -10,15 +11,15 @@
     <section id="slider">
         <div class="owl-carousel slider">
             @for (int i = 0; i < Model.Sliders.Count; i++)
-             {
+            {
                 <div><img src="~/img/@Model.Sliders[i].Image" alt=""></div>
-             }
+            }
         </div>
         <div class="container context pl-lg-5 ml-lg-3">
             <div class="row">
                 <div class="col-lg-5">
                     <div class="text">
-                       @Html.Raw(Model.SliderInfo.Title)
+                        @Html.Raw(Model.SliderInfo.Title)
                         <p class="text-black-50 d-none d-sm-block">
                             @Model.SliderInfo.Description
                         </p>
@@ -71,134 +72,25 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="product-item text-center" data-id="popular">
-                        <div class="img">
-                            <a href="">
-                                <img src="~/img/shop-14-img.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="title mt-3">
-                            <h6>MAJESTY PALM</h6>
-                        </div>
-                        <div class="price">
-                            <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$259</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="product-item text-center" data-id="popular">
-                        <div class="img">
-                            <a href="">
-                                <img src="~/img/shop-13-img.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="title mt-3">
-                            <h6>MAJESTY PALM</h6>
-                        </div>
-                        <div class="price">
-                            <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$259</span>
+                @foreach (var item in Model.Products)
+                {
+                    <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
+                        <div class="product-item text-center" data-id="@item.CategoryId">
+                            <div class="img">
+                                <a asp-controller="Product" asp-action="Index" asp-route-id="@item.Id">
+                                    <img src="~/img/@item.ProductImage.FirstOrDefault(m=>m.IsMain)?.Name" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            <div class="title mt-3">
+                                <h6>@item.Name</h6>
+                            </div>
+                            <div class="price">
+                                <span class="text-black-50">Add to cart</span>
+                                <span class="text-black-50">@item.Price</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="product-item text-center" data-id="winter">
-                        <div class="img">
-                            <a href="">
-                                <img src="~/img/shop-12-img.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="title mt-3">
-                            <h6>MAJESTY PALM</h6>
-                        </div>
-                        <div class="price">
-                            <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$259</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="product-item text-center" data-id="winter">
-                        <div class="img">
-                            <a href="">
-                                <img src="~/img/shop-11-img.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="title mt-3">
-                            <h6>MAJESTY PALM</h6>
-                        </div>
-                        <div class="price">
-                            <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$259</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="product-item text-center" data-id="various">
-                        <div class="img">
-                            <a href="">
-                                <img src="~/img/shop-10-img.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="title mt-3">
-                            <h6>MAJESTY PALM</h6>
-                        </div>
-                        <div class="price">
-                            <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$259</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="product-item text-center" data-id="various">
-                        <div class="img">
-                            <a href="">
-                                <img src="~/img/shop-9-img.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="title mt-3">
-                            <h6>MAJESTY PALM</h6>
-                        </div>
-                        <div class="price">
-                            <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$259</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="product-item text-center" data-id="exotic">
-                        <div class="img">
-                            <a href="">
-                                <img src="~/img/shop-8-img.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="title mt-3">
-                            <h6>MAJESTY PALM</h6>
-                        </div>
-                        <div class="price">
-                            <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$259</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-4 col-lg-3 mt-3">
-                    <div class="product-item text-center" data-id="exotic">
-                        <div class="img">
-                            <a href="">
-                                <img src="~/img/shop-7-img.jpg" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <div class="title mt-3">
-                            <h6>MAJESTY PALM</h6>
-                        </div>
-                        <div class="price">
-                            <span class="text-black-50">Add to cart</span>
-                            <span class="text-black-50">$259</span>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </section>
@@ -333,79 +225,9 @@
     </section>
 
     <!-- SUBSCRIBE END -->
-    <!-- BLOG START -->
 
-    <section id="blog">
-        <div class="container">
-            <div class="row py-5">
-                <div class="offset-lg-3 col-lg-6">
-                    <div class="section-title">
-                        <h1>From our Blog</h1>
-                        <p class="text-black-50">
-                            A perfect blend of creativity, energy, communication, happiness and
-                            love. Let us arrange
-                            a smile for you.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row pb-5">
-                <div class="col-md-6 col-lg-4">
-                    <div class="item">
-                        <div class="img position-relative">
-                            <img src="~/img/blog-feature-img-1.jpg" class="img-fluid" alt="">
-                            <div class="date rounded bg-light position-absolute py-1 px-2">
-                                <span>29.12.2019</span>
-                            </div>
-                        </div>
-                        <div class="text mt-3 text-center px-5">
-                            <h5>Flower Power</h5>
-                            <p class="text-black-50">
-                                Class aptent taciti sociosqu ad litora torquent per conubia
-                                nostra, per
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="item">
-                        <div class="img position-relative">
-                            <img src="~/img/blog-feature-img-3.jpg" class="img-fluid" alt="">
-                            <div class="date rounded bg-light position-absolute py-1 px-2">
-                                <span>29.12.2019</span>
-                            </div>
-                        </div>
-                        <div class="text mt-3 text-center px-5">
-                            <h5>Local Florists</h5>
-                            <p class="text-black-50">
-                                Class aptent taciti sociosqu ad litora torquent per conubia
-                                nostra, per
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4">
-                    <div class="item">
-                        <div class="img position-relative">
-                            <img src="~/img/blog-feature-img-4.jpg" class="img-fluid" alt="">
-                            <div class="date rounded bg-light position-absolute py-1 px-2">
-                                <span>29.12.2019</span>
-                            </div>
-                        </div>
-                        <div class="text mt-3 text-center px-5">
-                            <h5>Flower Beauty</h5>
-                            <p class="text-black-50">
-                                Class aptent taciti sociosqu ad litora torquent per conubia
-                                nostra, per
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <partial name="_BlogsPartial" model="Model.Blogs" />
 
-    <!-- BLOG END -->
     <!-- SAY START -->
 
     <section id="say">
@@ -413,39 +235,26 @@
             <div class="row py-5 justify-content-center">
                 <div class="col-md-8 col-xl-6">
                     <div class="owl-carousel say">
-                        <div>
-                            <div class="item text-center">
-                                <div class="img d-flex justify-content-center">
-                                    <img src="~/img/testimonial-img-1.png" alt="">
-                                </div>
-                                <div class="text text-muted pt-3 pb-5">
-                                    <i>
-                                        Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus
-                                        lingua.
-                                    </i>
-                                </div>
-                                <div class="author">
-                                    <h6>Anna Barnes</h6>
-                                    <p class="text-black-50">Florist</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="item text-center">
-                                <div class="img d-flex justify-content-center">
-                                    <img src="~/img/testimonial-img-2.png" alt="">
-                                </div>
-                                <div class="text text-muted pt-3 pb-5">
-                                    <i>
-                                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-                                        ligula eget.
-                                    </i>
-                                </div>
-                                <div class="author">
-                                    <h6>Jasmine White</h6>
-                                    <p class="text-black-50">Florist</p>
+                        @foreach (var item in Model.Experts)
+                        {
+                            <div>
+                                <div class="item text-center">
+                                    <div class="img d-flex justify-content-center">
+                                        <img src="~/img/@item.Title" alt="">
+                                    </div>
+                                    <div class="text text-muted pt-3 pb-5">
+                                        <i>
+                                           @item.Description
+                                        </i>
+                                    </div>
+                                    <div class="author">
+                                        <h6>@item.Name</h6>
+                                        <p class="text-black-50">@item.Profession</p>
+                                    </div>
                                 </div>
                             </div>
+                        }
+                        <div>
                         </div>
                     </div>
                 </div>
@@ -458,14 +267,12 @@
 
     <section id="instagram">
         <div class="owl-carousel instagram">
-            <div><img src="~/img/instagram1.jpg" class="img-fluid" alt=""></div>
-            <div><img src="~/img/instagram2.jpg" class="img-fluid" alt=""></div>
-            <div><img src="~/img/instagram3.jpg" class="img-fluid" alt=""></div>
-            <div><img src="~/img/instagram4.jpg" class="img-fluid" alt=""></div>
-            <div><img src="~/img/instagram5.jpg" class="img-fluid" alt=""></div>
-            <div><img src="~/img/instagram6.jpg" class="img-fluid" alt=""></div>
-            <div><img src="~/img/instagram7.jpg" class="img-fluid" alt=""></div>
-            <div><img src="~/img/instagram8.jpg" class="img-fluid" alt=""></div>
+            @foreach (var item in Model.ExpertImages)
+             {
+                <div><img src="~/img/@item.Name" class="img-fluid" alt=""></div>
+
+             }
+
         </div>
         <div class="hastag bg-light text-muted py-2 px-3">
             #FIORELLO

@@ -1,38 +1,48 @@
 ﻿<Properties StartupConfiguration="{A00CB083-0542-4C6D-BAE1-6FE99B51208B}|Default">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.OneToMany-task PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="OneToMany-task/Models/Category.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="OneToMany-task/Services/ExpertImageService.cs">
     <Files>
-      <File FileName="OneToMany-task/Models/ProductImage.cs" />
-      <File FileName="OneToMany-task/Data/AppDbContext.cs" />
-      <File FileName="OneToMany-task/Program.cs" />
-      <File FileName="OneToMany-task/Views/Home/Index.cshtml" />
-      <File FileName="OneToMany-task/Migrations/AppDbContextModelSnapshot.cs" />
-      <File FileName="OneToMany-task/Controllers/HomeController.cs" />
-      <File FileName="OneToMany-task/ViewModels/HomeVM.cs" />
-      <File FileName="OneToMany-task/Models/Category.cs" Line="11" Column="1" />
-      <File FileName="OneToMany-task/Models/BaseEntity.cs" />
-      <File FileName="OneToMany-task/Models/Product.cs" Line="14" Column="2" />
-      <File FileName="OneToMany-task/Models/SliderInfo.cs" />
+      <File FileName="OneToMany-task/Controllers/HomeController.cs" Line="40" Column="29" />
+      <File FileName="OneToMany-task/Views/Product/Index.cshtml" Line="1" Column="1" />
+      <File FileName="OneToMany-task/Data/AppDbContext.cs" Line="18" Column="1" />
+      <File FileName="OneToMany-task/Models/Expert.cs" Line="14" Column="1" />
+      <File FileName="OneToMany-task/Views/Home/Index.cshtml" Line="241" Column="63" />
+      <File FileName="OneToMany-task/Services/Interfaces/IExpertService.cs" Line="9" Column="6" />
+      <File FileName="OneToMany-task/Services/ExpertService.cs" Line="18" Column="9" />
+      <File FileName="OneToMany-task/Program.cs" Line="16" Column="1" />
+      <File FileName="OneToMany-task/Models/ExpertImage.cs" Line="4" Column="38" />
+      <File FileName="OneToMany-task/Services/Interfaces/IExpertImageService.cs" Line="10" Column="2" />
+      <File FileName="OneToMany-task/Services/ExpertImageService.cs" Line="25" Column="1" />
+      <File FileName="OneToMany-task/ViewModels/HomeVM.cs" Line="17" Column="6" />
+      <File FileName="OneToMany-task/Services/ProductService.cs" Line="1" Column="1" />
+      <File FileName="OneToMany-task/Controllers/ProductController.cs" Line="1" Column="1" />
+      <File FileName="OneToMany-task/Services/CategoryService.cs" Line="1" Column="1" />
+      <File FileName="OneToMany-task/Models/Product.cs" Line="1" Column="1" />
+      <File FileName="OneToMany-task/Services/Interfaces/ICategoryService.cs" Line="1" Column="1" />
+      <File FileName="OneToMany-task/Services/Interfaces/IProductService.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="OneToMany-task" expanded="True">
-            <Node name="OneToMany-task" expanded="True">
+            <Node name="OneToMany-task">
+              <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Models" expanded="True">
-                <Node name="Category.cs" selected="True" />
+              <Node name="Services" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+                <Node name="ExpertImageService.cs" selected="True" />
               </Node>
+              <Node name="ViewModels" expanded="True" />
             </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
